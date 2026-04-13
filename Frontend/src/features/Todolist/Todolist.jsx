@@ -20,10 +20,12 @@ function Todolist() {
         setTitle("");
         refetch()
     }
+
     const handleDelete = async(id) => {
         await deleteTodo(id);
         refetch();
     }
+
     const handleEditClick =(todo)=>{
         setEditId(todo._id);
         setTitle(todo.title);
