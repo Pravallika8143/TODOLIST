@@ -37,7 +37,7 @@ function Todolist() {
       <div className="card-body text-center">
         <h3>Todolist</h3>
         <div>
-          <input type="text" value={title} onChange={(e)=>setTitle(e.target.value)} placeholder="Enter Todo"/>
+          <input type="text" value={title} className="me-2" onChange={(e)=>setTitle(e.target.value)} placeholder="Enter Todo"/>
           <button type="submit" onClick={handleAddOrUpdate}>{editId?"Update":"Add"}</button><br/><br/>
         </div>
         <ul className="list-group">
