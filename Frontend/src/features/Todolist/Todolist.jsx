@@ -36,7 +36,7 @@ function Todolist() {
         <h3>Todolist</h3>
         <div>
           <input type="text" value={title} onChange={(e)=>setTitle(e.target.value)} placeholder="Enter Todo"/>
-          <button type="submit"onClick={handleAddOrUpdate}>{editId?"Update":"Add"}</button>
+          <button type="submit" onClick={handleAddOrUpdate}>{editId?"Update":"Add"}</button><br/><br/>
         </div>
         <ul className="list-group">
          {
@@ -44,8 +44,8 @@ function Todolist() {
                 <li className =" list-group-item d-flex justify-content-between align-items-center">
                     <span>{todo.title}</span>
                     <div>
-                        <button onClick={()=>handleEditClick(todo)}>Edit</button>
-                        <button onClick={()=>handleDelete(todo._id)}>Delete</button>
+                        <button className="me-2" onClick={()=>handleEditClick(todo)}>Edit</button>
+                        <button className="me-2" onClick={()=>handleDelete(todo._id)}>Delete</button>
                     </div>
                 </li>
             ))
